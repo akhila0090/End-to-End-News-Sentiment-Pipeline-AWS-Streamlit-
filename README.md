@@ -4,3 +4,27 @@ This project implements a fully automated, end-to-end news sentiment analysis pi
 # ARCHITECTURE
 
 ![architecture](https://github.com/user-attachments/assets/cfd5872f-637a-4c11-9d3a-ea6693db25bd)
+
+# Features
+
+1.Automated news fetching every 5 mins via EventBridge
+2.Sentiment analysis using VADER
+3.Store articles and sentiments in PostgreSQL (RDS)
+4.Raw news archived in S3 (JSON format)
+5.Streamlit dashboard to view latest news and sentiment
+6.Dockerized frontend app deployed on AWS ECS Fargate
+
+1.Creating Lambda Functions
+
+#1.extraction-news
+- Pulls data from News API
+- Cleans text and computes sentiment using `vaderSentiment`
+- Saves original article JSON to S3
+- Invoked via EventBridge every 5 minutes
+
+# 2.news-to-rds
+- Triggered in production via S3 events
+- Reads cleaned JSONs from S3
+- Inserts sentiment-analyzed data into RDS table
+- 
+![2 0](https://github.com/user-attachments/assets/82276bcc-bd05-42e7-a184-6961e2ab071c)
