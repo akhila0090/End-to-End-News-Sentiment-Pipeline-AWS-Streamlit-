@@ -58,7 +58,7 @@ The Streamlit app is containerized using Docker with the help of a Dockerfile an
 
 
 ## 6.Deploy to AWS ECS Fargate
-The Docker container is deployed to AWS ECS Fargate, which automatically manages scaling and infrastructure, making the Streamlit dashboard easy to run without managing any servers.
+The Docker container is deployed to AWS ECS Fargate, which handles scaling and infrastructure automatically. To run the app, a cluster is created, defined a task with the container, and started a service to keep the Streamlit dashboard running without managing any servers.
 
 ![10 0](https://github.com/user-attachments/assets/355a338b-a36d-453f-b0c2-0b1432d4503e)
 
