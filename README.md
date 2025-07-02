@@ -17,10 +17,9 @@ The system automatically collects the latest news articles every 5 minutes. This
 # 2.Inserting Sentiment-Tagged News into PostgreSQL (RDS) via Lambda
 A Lambda function that reads JSON files containing sentiment-analyzed news articles from an S3 bucket is created. For each article, it extracts the title, source, timestamp, and VADER sentiment score, then classifies the sentiment as Positive, Negative, or Neutral. It inserts the processed data into a PostgreSQL RDS table called news_articles, while avoiding duplicates using a unique constraint on title, published date, and source. After successful insertion, the Lambda deletes the processed file from S3 to prevent reprocessing.
 
-![4 0](https://github.com/user-attachments/assets/3dc03a0d-e5a8-4e05-b211-dfbbdd551b0c)
+![3 0](https://github.com/user-attachments/assets/114178b7-4125-48b9-bf6e-aedcafbd57d5)
 ![5 0](https://github.com/user-attachments/assets/e2f4cd7a-674b-4b89-b795-c0705bb1d697)
 
 
 
-Presents insights through an interactive Streamlit dashboard
 
