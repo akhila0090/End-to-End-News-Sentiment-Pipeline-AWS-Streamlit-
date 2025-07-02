@@ -6,7 +6,7 @@ This project implements a fully automated, end-to-end news sentiment analysis pi
 ![architecture](https://github.com/user-attachments/assets/cfd5872f-637a-4c11-9d3a-ea6693db25bd)
 
 
-#1.Creating Lambda Functions
+#Creating Lambda Functions
 
 #1.extraction-news
 - Pulls data from News API
@@ -18,5 +18,5 @@ This project implements a fully automated, end-to-end news sentiment analysis pi
 - Triggered in production via S3 events
 - Reads cleaned JSONs from S3
 - Inserts sentiment-analyzed data into RDS table
-- 
+  
 ![2 0](https://github.com/user-attachments/assets/82276bcc-bd05-42e7-a184-6961e2ab071c)
